@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "personal portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaBasile/Personal-Portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "development"
+  ],
+  "author": "Sasha B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SashaBasile/Personal-Portfolio/issues"
+  },
+  "homepage": "https://github.com/SashaBasile/Personal-Portfolio#readme"
+}
