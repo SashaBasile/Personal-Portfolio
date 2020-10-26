@@ -1,0 +1,74 @@
+//Variables
+
+//Mixin
+@mixin main-text {
+    color: floralwhite;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.2cm;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    @include main-text();
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    height: 50px;
+    text-align: right;
+    padding: 1.5rem;
+    white-space: nowrap;
+
+    ul {
+        display: inline-flex;
+        list-style-type: none;
+        letter-spacing: 0cm; 
+
+
+        li {
+            margin-right: 0.5cm;
+           
+        }
+      }
+    }
+
+header {
+    @include main-text();
+    background-image: url("../Resources/background.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 240px;
+
+
+    h1, h3 {
+        margin: 0.5rem;
+      }
+
+    a {
+        border: solid floralwhite;
+        letter-spacing: 0cm;
+        color: floralwhite;
+        margin: 10px;
+        padding: 0.5rem;
+        text-decoration: none;
+
+    }
+}
+
+#portfolio, #about, #contact {
+    @include main-text();
+    color: black;
+    margin: 0.5rem;
+}
+
+footer {
+    @include main-text();
+    background-image: linear-gradient(to right, rgb(4, 10, 6), rgb(10, 26, 22));
+    text-align: center;
+  height: 30px;
+}

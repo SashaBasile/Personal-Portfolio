@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+nav {
+  color: floralwhite;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2cm;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  height: 50px;
+  text-align: right;
+  padding: 1.5rem;
+  white-space: nowrap; }
+  nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    letter-spacing: 0cm; }
+    nav ul li {
+      margin-right: 0.5cm; }
+
+header {
+  color: floralwhite;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2cm;
+  background-image: url("../Resources/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 240px; }
+  header h1, header h3 {
+    margin: 0.5rem; }
+  header a {
+    border: solid floralwhite;
+    letter-spacing: 0cm;
+    color: floralwhite;
+    margin: 10px;
+    padding: 0.5rem;
+    text-decoration: none; }
+
+#portfolio, #about, #contact {
+  color: floralwhite;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2cm;
+  color: black;
+  margin: 0.5rem; }
+
+footer {
+  color: floralwhite;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2cm;
+  background-image: linear-gradient(to right, #040a06, #0a1a16);
+  text-align: center;
+  height: 30px; }

@@ -4,7 +4,10 @@
   "description": "personal portfolio",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/SashaBasile/Personal-Portfolio/issues"
   },
-  "homepage": "https://github.com/SashaBasile/Personal-Portfolio#readme"
+  "homepage": "https://github.com/SashaBasile/Personal-Portfolio#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "fontawesome": "^5.6.3"
+  }
 }
