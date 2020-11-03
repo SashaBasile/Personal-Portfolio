@@ -25,10 +25,9 @@
   },
   "homepage": "https://github.com/SashaBasile/Personal-Portfolio#readme",
   "devDependencies": {
+    "fontawesome": "^5.6.3",
     "lite-server": "^2.5.4",
     "node-sass": "^4.14.1"
   },
-  "dependencies": {
-    "fontawesome": "^5.6.3"
-  }
+  "dependencies": {}
 }

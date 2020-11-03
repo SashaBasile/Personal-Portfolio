@@ -3,6 +3,23 @@
   padding: 0;
   box-sizing: border-box; }
 
+@media only screen and (min-width: 800px) {
+  header a {
+    max-width: 50%; } }
+
+@media only screen and (max-width: 800px) {
+  nav {
+    background-color: rgba(1, 8, 5, 0.897);
+    z-index: 5; }
+  header a {
+    display: flex;
+    flex-direction: column;
+    text-align: center; } }
+
+@media only screen and (max-width: 600px) {
+  #about span {
+    margin-right: 10px; } }
+
 nav {
   color: floralwhite;
   font-family: 'Raleway', sans-serif;
@@ -20,6 +37,9 @@ nav {
     letter-spacing: 0cm; }
     nav ul li {
       margin-right: 0.5cm; }
+      nav ul li a {
+        text-decoration: none;
+        color: floralwhite; }
 
 header {
   color: floralwhite;
@@ -30,22 +50,74 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 240px; }
-  header h1, header h3 {
-    margin: 0.5rem; }
+  header h1 {
+    margin: 0.5rem;
+    font-size: 45px; }
+  header h3 {
+    margin: 0.5rem;
+    font-size: 25px; }
   header a {
     border: solid floralwhite;
     letter-spacing: 0cm;
     color: floralwhite;
-    margin: 10px;
-    padding: 0.5rem;
-    text-decoration: none; }
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center; }
 
 #portfolio, #about, #contact {
   color: floralwhite;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.2cm;
   color: black;
-  margin: 0.5rem; }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center; }
+  #portfolio h2, #about h2, #contact h2 {
+    margin: 2rem; }
+  #portfolio .fa-arrow-down, #about .fa-arrow-down, #contact .fa-arrow-down {
+    font-size: 30px;
+    margin-top: 15px; }
+  #portfolio p, #portfolio a, #about p, #about a, #contact p, #contact a {
+    text-decoration: none;
+    margin-top: 10px;
+    letter-spacing: 0;
+    color: black;
+    list-style-type: none;
+    line-height: 1.9; }
+    #portfolio p span, #portfolio a span, #about p span, #about a span, #contact p span, #contact a span {
+      margin: 3px; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); }
+  .modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; }
+    .modal .modal-content .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
 
 footer {
   color: floralwhite;
@@ -53,4 +125,7 @@ footer {
   letter-spacing: 0.2cm;
   background-image: linear-gradient(to right, #040a06, #0a1a16);
   text-align: center;
-  height: 30px; }
+  height: 50px;
+  margin-top: 20px; }
+  footer p {
+    padding-top: 10px; }
