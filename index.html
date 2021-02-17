@@ -2,92 +2,71 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/all.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/all.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    
+
     <title>SashaB</title>
 </head>
 
 <body>
 
     <nav>
-        <ul>
-            <li><a href="header">Home</a></li>
-            <li><a href="#portfolio">Portfolio</li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="dropdown_menu">
+            <i class="fas fa-ellipsis-v"></i>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#portfolio">Portfolio</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header>
-        <h1>Sasha Basile</h1>
-        <h3>Web Developer</h3>
-        <br>
-        
-        <a role="button" href="#portfolio">Portfolio</a>
-        <a role="button" href="#about">About</a>
+    <header id="header">
+        <div class="header_content">
+            <h1>Sasha Basile</h1>
+            <h3>Web Developer</h3>
+            <div>
+                <a role="button" href="#portfolio">Portfolio</a>
+                <a role="button" href="#about">About</a>
+            </div>
+        </div>
     </header>
 
     <div id="portfolio">
-
         <h2>Portfolio</h2>
 
-        <p>Click on the image for the project details</p>
-
-        <!---->
-        <!-- Trigger/Open The Modal -->
-        <button id="myBtn">Open Modal</button>
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <br>
-                <p>Some text in the Modal..</p>
-                <p>hhsjfsbfhjsbfhjbshfbhsjfsjfbhjsf
-                    <br>
-                    <br>
-                    ajidhahd
-                </p>
-            </div>
-
-        </div>
+        <p>Coming Soon</p>
     </div>
 
     <div id="about">
 
         <h2>About</h2>
-        <p>Hi there! I'm Sasha and I am a Web Developer.
-            <br>
-            I was born in Russia, raised in the Caput Mundi and I am currently living in London.
-            <br>
-            I like creating and debuggin code and I aspire to become a Full Stack Developer.
-            <br>
-            <br>
-            I'm really glad you visited this page.<br> Just send me a message if you want reach out!
-        </p>
-        <span class="fa fa-arrow-down fa-lg"></span>
+        <p>Hi there! I'm Sasha and I am a Web Developer.<br> I was born in Russia, raised in the Caput Mundi and I am currently living in London.<br> I like creating and debugging code and I aspire to become a Full Stack Developer.
+            <br> My expertise is mostly focused on elagant layout and mobile-first design.</p>
     </div>
 
     <div id="contact">
+        <p> I'm really glad you visited this page.<br> Just send me a message if you want reach out!</p>
+        <br>
         <ul>
             <li><a href="mailto:alexandrabasile@outlook.com"><span class="fa fa-envelope"></span> alexandrabasile@outlook.com</a></li>
-            <li><a href="https://github.com/SashaBasile"><span class="fa fa-github"></span> Sasha Basile</a></li>
-            <li><a href="https://www.linkedin.com/in/alexandra-basile-k/"><span class="fa fa-linkedin"></span> Alexandra Basile </a></li>
-            <li><a href="https://www.instagram.com/sashabasilek/"><span class="fa fa-instagram"></span>Sasha</a></li>
-        
-        
-    </ul>
+            <li><a href="https://github.com/SashaBasile" target="_blank"><span class="fa fa-github"></span> Sasha Basile</a></li>
+            <li><a href="https://www.linkedin.com/in/alexandra-basile-k/" target="_blank"><span class="fa fa-linkedin"></span> Alexandra Basile </a></li>
+            <li><a href="https://www.instagram.com/sashabasilek/" target="_blank"><span class="fa fa-instagram"></span>Sasha</a></li>
+        </ul>
 
     </div>
 
     <footer>
-        <p>&copy; Sasha Basile 2020</p>
+        <p>&copy; Sasha Basile 2021</p>
     </footer>
 
     <script type="text/javascript" src="./script.js"></script>

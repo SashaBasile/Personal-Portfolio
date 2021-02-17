@@ -1,131 +1,209 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
   header a {
-    max-width: 50%; } }
+    max-width: 100%;
+    min-width: 20%;
+  }
+}
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
   nav {
     background-color: rgba(1, 8, 5, 0.897);
-    z-index: 5; }
-  header a {
-    display: flex;
-    flex-direction: column;
-    text-align: center; } }
+    z-index: 5;
+  }
+  header div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   #about span {
-    margin-right: 10px; } }
+    margin-right: 10px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: floralwhite;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.2cm;
+  text-align: center;
+}
 
 nav {
   color: floralwhite;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 0.2cm;
+  text-align: center;
   position: fixed;
   width: 100%;
   z-index: 5;
-  height: 50px;
+  height: 100px;
   text-align: right;
   padding: 1.5rem;
-  white-space: nowrap; }
-  nav ul {
-    display: inline-flex;
-    list-style-type: none;
-    letter-spacing: 0cm; }
-    nav ul li {
-      margin-right: 0.5cm; }
-      nav ul li a {
-        text-decoration: none;
-        color: floralwhite; }
+  white-space: nowrap;
+  visibility: visible;
+}
+
+nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style-type: none;
+  letter-spacing: 0cm;
+}
+
+nav ul li {
+  margin-right: 0.7cm;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: floralwhite;
+}
+
+.scrolled {
+  background-color: black;
+}
 
 header {
+  width: 100vw;
+  height: 100vh;
   color: floralwhite;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 0.2cm;
-  background-image: url("../Resources/background.jpg");
-  background-position: center;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../Resources/background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../Resources/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 240px; }
-  header h1 {
-    margin: 0.5rem;
-    font-size: 45px; }
-  header h3 {
-    margin: 0.5rem;
-    font-size: 25px; }
-  header a {
-    border: solid floralwhite;
-    letter-spacing: 0cm;
-    color: floralwhite;
-    margin-top: 20px;
-    margin-left: 10px;
-    padding: 15px;
-    text-decoration: none;
-    text-align: center; }
+}
 
-#portfolio, #about, #contact {
+header .header_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 25vh;
+}
+
+header .header_content h1 {
+  font-size: 3rem;
+}
+
+header .header_content h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+header .header_content div {
+  margin-top: 1.5rem;
+}
+
+header .header_content div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: solid floralwhite;
+  letter-spacing: 0cm;
   color: floralwhite;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 0.2cm;
-  color: black;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center; }
-  #portfolio h2, #about h2, #contact h2 {
-    margin: 2rem; }
-  #portfolio .fa-arrow-down, #about .fa-arrow-down, #contact .fa-arrow-down {
-    font-size: 30px;
-    margin-top: 15px; }
-  #portfolio p, #portfolio a, #about p, #about a, #contact p, #contact a {
-    text-decoration: none;
-    margin-top: 10px;
-    letter-spacing: 0;
-    color: black;
-    list-style-type: none;
-    line-height: 1.9; }
-    #portfolio p span, #portfolio a span, #about p span, #about a span, #contact p span, #contact a span {
-      margin: 3px; }
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); }
-  .modal .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; }
-    .modal .modal-content .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold; }
-
-.close:hover,
-.close:focus {
-  color: black;
+  padding: 10px;
+  margin: 1rem auto;
+  width: 50vw;
   text-decoration: none;
-  cursor: pointer; }
+  text-align: center;
+}
+
+header .header_content div a:hover {
+  background-color: rgba(25, 105, 77, 0.148);
+}
+
+#portfolio,
+#about,
+#contact {
+  color: floralwhite;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.2cm;
+  text-align: center;
+  color: black;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+#portfolio h2,
+#about h2,
+#contact h2 {
+  margin-bottom: 2rem;
+}
+
+#portfolio p,
+#about p,
+#contact p {
+  margin: 0 1.5rem;
+}
+
+#portfolio p,
+#portfolio a,
+#about p,
+#about a,
+#contact p,
+#contact a {
+  color: black;
+  letter-spacing: 0;
+  list-style-type: none;
+  line-height: 1.9;
+  text-decoration: none;
+}
+
+#portfolio p span,
+#portfolio a span,
+#about p span,
+#about a span,
+#contact p span,
+#contact a span {
+  margin: 0.5rem;
+}
+
+#portfolio a:hover,
+#portfolio span:hover,
+#about a:hover,
+#about span:hover,
+#contact a:hover,
+#contact span:hover {
+  color: #19694d;
+}
 
 footer {
-  color: floralwhite;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 0.2cm;
+  background-image: -webkit-gradient(linear, left top, right top, from(#040a06), to(#0a1a16));
   background-image: linear-gradient(to right, #040a06, #0a1a16);
-  text-align: center;
-  height: 50px;
-  margin-top: 20px; }
-  footer p {
-    padding-top: 10px; }
+  height: 7vh;
+  margin-top: 3rem;
+}
+
+footer p {
+  padding-top: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

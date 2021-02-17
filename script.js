@@ -1,3 +1,5 @@
+const { render } = require("node-sass");
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -23,3 +25,11 @@ span.onclick = function() {
       modal.style.display = "none";
     }
   }
+
+  const navbar1 = document.getElementById('#navbar1');
+  const navbar2 = document.getElementById('#onscroll-nav');
+
+  window.onscroll = function () {
+    navbar1.style.visibility = hidden;
+    navbar2.style.visibility = visible;
+  };
