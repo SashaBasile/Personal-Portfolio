@@ -45,36 +45,72 @@ body {
   text-align: center;
 }
 
-nav {
-  color: floralwhite;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.2cm;
-  text-align: center;
+nav i {
   position: fixed;
-  width: 100%;
-  z-index: 5;
-  height: 100px;
-  text-align: right;
-  padding: 1.5rem;
+  left: 0px;
+  margin: 0.5rem;
+  color: floralwhite;
+}
+
+.dropdown_menu {
+  display: none;
+  color: black;
+  position: fixed;
+  top: 0.1px;
+  width: 55vw;
+  height: 100vh;
+  background-color: floralwhite;
+  z-index: 1;
   white-space: nowrap;
   visibility: visible;
+  border-radius: 0px 20px 20px 0px;
+  -webkit-border-radius: 0px 20px 20px 0px;
+  -moz-border-radius: 0px 20px 20px 0px;
+  -ms-border-radius: 0px 20px 20px 0px;
+  -o-border-radius: 0px 20px 20px 0px;
+  -webkit-box-shadow: 5px 1px 5px black;
+          box-shadow: 5px 1px 5px black;
 }
 
-nav ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.dropdown_menu ul {
+  color: black;
   list-style-type: none;
   letter-spacing: 0cm;
+  font-size: 1.2rem;
 }
 
-nav ul li {
+.dropdown_menu ul p {
+  position: relative;
+  right: -110px;
+  top: 20px;
+}
+
+.dropdown_menu ul p:hover {
+  text-shadow: 3px 3px 5px black;
+}
+
+.dropdown_menu ul li {
+  margin-top: 5rem;
+  color: black;
   margin-right: 0.7cm;
 }
 
-nav ul li a {
+.dropdown_menu ul li a {
+  font-family: "Raleway", sans-serif;
+  color: black;
   text-decoration: none;
-  color: floralwhite;
+}
+
+.dropdown_menu ul li:hover {
+  text-shadow: 3px 3px 5px black;
+}
+
+.scrolled {
+  color: black;
+}
+
+.full_length_menu {
+  display: none;
 }
 
 .scrolled {
@@ -95,6 +131,7 @@ header {
 }
 
 header .header_content {
+  width: 50vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,6 +141,7 @@ header .header_content {
           flex-direction: column;
   position: absolute;
   top: 25vh;
+  left: 25vw;
 }
 
 header .header_content h1 {

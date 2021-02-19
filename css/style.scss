@@ -66,28 +66,66 @@ body {
 }
 
 nav {
-    @include main-text();
+    i {
+        position: fixed;
+        left: 0px;
+        margin: 0.5rem;
+        color: floralwhite;
+    }
+}
+
+.dropdown_menu {
+    display: none;
+    color: black;
     position: fixed;
-    width: 100%;
-    z-index: 5;
-    height: 100px;
-    text-align: right;
-    padding: 1.5rem;
+    top: 0.1px;
+    width: 55vw;
+    height: 100vh;
+    background-color: floralwhite;
+    z-index: 1;
     white-space: nowrap;
     visibility: visible;
+    border-radius: 0px 20px 20px 0px;
+    -webkit-border-radius: 0px 20px 20px 0px;
+    -moz-border-radius: 0px 20px 20px 0px;
+    -ms-border-radius: 0px 20px 20px 0px;
+    -o-border-radius: 0px 20px 20px 0px;
+    box-shadow: 5px 1px 5px rgb(0, 0, 0);
     ul {
-        display: inline-flex;
+        color: black;
         list-style-type: none;
         letter-spacing: 0cm;
+        font-size: 1.2rem;
+        p {
+            position: relative;
+            right: -110px;
+            top: 20px;
+        }
+        p:hover {
+            text-shadow: 3px 3px 5px black;
+        }
         li {
+            margin-top: 5rem;
+            color: black;
             margin-right: 0.7cm;
             a {
+                font-family: "Raleway", sans-serif;
+                color: black;
                 text-decoration: none;
-                color: floralwhite;
+            }
+            &:hover {
+                text-shadow: 3px 3px 5px black;
             }
         }
     }
-    @include mobile
+}
+
+.scrolled {
+    color: black;
+}
+
+.full_length_menu {
+    display: none;
 }
 
 .scrolled {
@@ -104,10 +142,12 @@ header {
         repeat: no-repeat;
     }
     .header_content {
+        width: 50vw;
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 25vh;
+        left: 25vw;
         h1 {
             font-size: 3rem;
         }

@@ -18,8 +18,18 @@
 <body>
 
     <nav>
+        <i class="fa fa-3x fa-bars"></i>
         <div class="dropdown_menu">
-            <i class="fas fa-ellipsis-v"></i>
+
+            <ul>
+                <p>X</p>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#portfolio">Portfolio</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="full_length_menu">
             <ul>
                 <li><a href="#header">Home</a></li>
                 <li><a href="#portfolio">Portfolio</li>
@@ -69,7 +79,21 @@
         <p>&copy; Sasha Basile 2021</p>
     </footer>
 
-    <script type="text/javascript" src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('i').mouseover(() => {
+                $('.dropdown_menu').css("display", "block");
+            })
+
+            $('.dropdown_menu').mouseleave(() => {
+                $('.dropdown_menu').css("display", "none");
+            })
+            $('a').click(() => {
+                $('.dropdown_menu').css("display", "none");
+            })
+        })
+    </script>
 </body>
 
 </html>
