@@ -19,18 +19,11 @@
 
     <nav>
         <i class="fa fa-3x fa-bars"></i>
-        <div class="dropdown_menu">
+        <i class="fa fa-2x fa-bars"></i>
+        <div class="menu">
 
             <ul>
                 <p>X</p>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#portfolio">Portfolio</li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="full_length_menu">
-            <ul>
                 <li><a href="#header">Home</a></li>
                 <li><a href="#portfolio">Portfolio</li>
                 <li><a href="#about">About</a></li>
@@ -43,7 +36,7 @@
         <div class="header_content">
             <h1>Sasha Basile</h1>
             <h3>Web Developer</h3>
-            <div>
+            <div class="header_buttons">
                 <a role="button" href="#portfolio">Portfolio</a>
                 <a role="button" href="#about">About</a>
             </div>
@@ -82,15 +75,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(() => {
-            $('i').mouseover(() => {
-                $('.dropdown_menu').css("display", "block");
+            $(window).scroll(() => {
+                if ($(document).scrollTop() > 600) {
+                    $('i').css("color", "black");
+                } else {
+                    $('i').css("color", "floralwhite");
+                }
             })
 
-            $('.dropdown_menu').mouseleave(() => {
-                $('.dropdown_menu').css("display", "none");
+            $('i').mouseover(() => {
+                $('.menu').css("display", "block");
+            })
+
+            $('.menu').mouseleave(() => {
+                $('.menu').css("display", "none");
             })
             $('a').click(() => {
-                $('.dropdown_menu').css("display", "none");
+                $('.menu').css("display", "none");
             })
         })
     </script>

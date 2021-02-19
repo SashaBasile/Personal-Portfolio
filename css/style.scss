@@ -1,60 +1,9 @@
-$mobile: 500px;
-$tablet: 850px;
-$desktop: 500px;
-@mixin tablet {
-    @media (max-width: #{$tablet}) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: #{$mobile}) {
-        @content;
-    }
-}
-
-@mixin main-text {
-    color: floralwhite;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.2cm;
-    text-align: center;
-}
-
+@import "variables";
+@import "mixin";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-@media only screen and (min-width: 700px) {
-    header {
-        a {
-            max-width: 100%;
-            min-width: 20%;
-        }
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    nav {
-        background-color: rgba(1, 8, 5, 0.897);
-        z-index: 5;
-    }
-    header {
-        div {
-            flex-wrap: wrap;
-            flex-direction: column;
-            text-align: center;
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #about {
-        span {
-            margin-right: 10px;
-        }
-    }
 }
 
 html {
@@ -72,9 +21,23 @@ nav {
         margin: 0.5rem;
         color: floralwhite;
     }
+    .fa-3x {
+        display: block;
+    }
+    .fa-2x {
+        display: none;
+    }
+    @include mobile {
+        .fa-2x {
+            display: block;
+        }
+        .fa-3x {
+            display: none;
+        }
+    }
 }
 
-.dropdown_menu {
+.menu {
     display: none;
     color: black;
     position: fixed;
@@ -90,7 +53,10 @@ nav {
     -moz-border-radius: 0px 20px 20px 0px;
     -ms-border-radius: 0px 20px 20px 0px;
     -o-border-radius: 0px 20px 20px 0px;
-    box-shadow: 5px 1px 5px rgb(0, 0, 0);
+    box-shadow: 3px 2px 3px rgb(0, 0, 0);
+    @include mobile {
+        width: 75vw;
+    }
     ul {
         color: black;
         list-style-type: none;
@@ -105,9 +71,11 @@ nav {
             text-shadow: 3px 3px 5px black;
         }
         li {
-            margin-top: 5rem;
+            margin-top: 4rem;
+            padding-bottom: 4rem;
             color: black;
             margin-right: 0.7cm;
+            border-bottom: 0.2px solid rgba(207, 207, 207, 0.298);
             a {
                 font-family: "Raleway", sans-serif;
                 color: black;
@@ -118,18 +86,6 @@ nav {
             }
         }
     }
-}
-
-.scrolled {
-    color: black;
-}
-
-.full_length_menu {
-    display: none;
-}
-
-.scrolled {
-    background-color: black;
 }
 
 header {
@@ -143,6 +99,7 @@ header {
     }
     .header_content {
         width: 50vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -171,9 +128,27 @@ header {
                     align: center;
                 }
                 &:hover {
-                    background-color: rgba(25, 105, 77, 0.148);
+                    background-color: rgba(25, 105, 77, 0.237);
                 }
             }
+        }
+    }
+    @include tablet {
+        .header_content {
+            position: absolute;
+            top: 35vh;
+            .header_buttons {
+                display: flex;
+                margin-top: 1rem;
+                a {
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+    @include desktop {
+        .header_content {
+            top: 38vh;
         }
     }
 }
@@ -206,15 +181,15 @@ header {
     }
     a:hover,
     span:hover {
-        color: rgb(25, 105, 77);
+        color: $dark;
     }
 }
 
 footer {
     background-image: linear-gradient(to right, rgb(4, 10, 6), rgb(10, 26, 22));
-    height: 7vh;
+    height: 10vh;
     margin-top: 3rem;
-    p {
-        padding-top: 1rem;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

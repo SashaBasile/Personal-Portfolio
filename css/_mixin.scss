@@ -1,0 +1,24 @@
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin main-text {
+    color: floralwhite;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.2cm;
+    text-align: center;
+}

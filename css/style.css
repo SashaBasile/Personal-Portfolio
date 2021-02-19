@@ -5,35 +5,6 @@
           box-sizing: border-box;
 }
 
-@media only screen and (min-width: 700px) {
-  header a {
-    max-width: 100%;
-    min-width: 20%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  nav {
-    background-color: rgba(1, 8, 5, 0.897);
-    z-index: 5;
-  }
-  header div {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #about span {
-    margin-right: 10px;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -52,7 +23,24 @@ nav i {
   color: floralwhite;
 }
 
-.dropdown_menu {
+nav .fa-3x {
+  display: block;
+}
+
+nav .fa-2x {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  nav .fa-2x {
+    display: block;
+  }
+  nav .fa-3x {
+    display: none;
+  }
+}
+
+.menu {
   display: none;
   color: black;
   position: fixed;
@@ -68,53 +56,49 @@ nav i {
   -moz-border-radius: 0px 20px 20px 0px;
   -ms-border-radius: 0px 20px 20px 0px;
   -o-border-radius: 0px 20px 20px 0px;
-  -webkit-box-shadow: 5px 1px 5px black;
-          box-shadow: 5px 1px 5px black;
+  -webkit-box-shadow: 3px 2px 3px black;
+          box-shadow: 3px 2px 3px black;
 }
 
-.dropdown_menu ul {
+@media (max-width: 450px) {
+  .menu {
+    width: 75vw;
+  }
+}
+
+.menu ul {
   color: black;
   list-style-type: none;
   letter-spacing: 0cm;
   font-size: 1.2rem;
 }
 
-.dropdown_menu ul p {
+.menu ul p {
   position: relative;
   right: -110px;
   top: 20px;
 }
 
-.dropdown_menu ul p:hover {
+.menu ul p:hover {
   text-shadow: 3px 3px 5px black;
 }
 
-.dropdown_menu ul li {
-  margin-top: 5rem;
+.menu ul li {
+  margin-top: 4rem;
+  padding-bottom: 4rem;
   color: black;
   margin-right: 0.7cm;
+  border-bottom: 0.2px solid rgba(207, 207, 207, 0.298);
 }
 
-.dropdown_menu ul li a {
+.menu ul li a {
   font-family: "Raleway", sans-serif;
   color: black;
   text-decoration: none;
 }
 
-.dropdown_menu ul li:hover {
+.menu ul li:hover {
   text-shadow: 3px 3px 5px black;
-}
-
-.scrolled {
-  color: black;
-}
-
-.full_length_menu {
-  display: none;
-}
-
-.scrolled {
-  background-color: black;
 }
 
 header {
@@ -132,6 +116,7 @@ header {
 
 header .header_content {
   width: 50vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +161,29 @@ header .header_content div a {
 }
 
 header .header_content div a:hover {
-  background-color: rgba(25, 105, 77, 0.148);
+  background-color: rgba(25, 105, 77, 0.237);
+}
+
+@media (min-width: 750px) {
+  header .header_content {
+    position: absolute;
+    top: 35vh;
+  }
+  header .header_content .header_buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1rem;
+  }
+  header .header_content .header_buttons a {
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 970px) {
+  header .header_content {
+    top: 38vh;
+  }
 }
 
 #portfolio,
@@ -237,11 +244,16 @@ header .header_content div a:hover {
 footer {
   background-image: -webkit-gradient(linear, left top, right top, from(#040a06), to(#0a1a16));
   background-image: linear-gradient(to right, #040a06, #0a1a16);
-  height: 7vh;
+  height: 10vh;
   margin-top: 3rem;
-}
-
-footer p {
-  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
